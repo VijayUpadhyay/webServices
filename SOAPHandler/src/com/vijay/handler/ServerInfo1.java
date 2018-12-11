@@ -1,0 +1,17 @@
+package com.vijay.handler;
+
+import javax.jws.HandlerChain;
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+
+@WebService
+@HandlerChain(file="handler-chain.xml")
+public class ServerInfo1 {
+	@WebMethod
+	public String getServerName() {
+
+		return "mkyong server";
+
+	}
+
+}
